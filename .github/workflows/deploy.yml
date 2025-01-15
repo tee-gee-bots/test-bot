@@ -1,0 +1,15 @@
+# .github/workflows/deploy.yml
+name: Deploy Bot
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@main
+    with:
+      environment: sandbox
+    secrets:
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
