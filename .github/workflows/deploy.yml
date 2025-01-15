@@ -15,7 +15,7 @@ jobs:
     uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@add-bot-platform
     with:
       environment: sandbox
-    secrets:
-      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}  # Passed through organization secrets
-      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}  # Passed through organization secrets
+    secrets: inherit
+      # TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      # AWS_REGION: ${{ secrets.AWS_REGION }}  # Passed through organization secrets
+      # AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}  # Passed through organization secrets
