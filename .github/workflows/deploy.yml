@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@main
+    uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@add-bot-platform
     with:
       environment: sandbox
     secrets:
