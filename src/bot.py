@@ -17,7 +17,7 @@ logging.basicConfig(
 logger = logging.getLogger(MY_BOT_NAME)
 
 # API configuration from environment
-API_ENDPOINT = os.getenv('API_ENDPOINT')
+API_ENDPOINT = os.getenv('API_ENDPOINT', 'http://localhost')
 api = MessageAPIClient(MY_BOT_NAME, API_ENDPOINT)
 
 async def health_check():
