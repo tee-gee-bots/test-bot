@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   deploy:
-    uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@add-bot-platform
+    uses: jo-yrabbit-sandbox/sandbox-infrastructure/.github/workflows/reusable-bot-deploy.yml@main
     with:
       environment: sandbox
     secrets:
