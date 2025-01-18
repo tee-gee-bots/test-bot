@@ -10,9 +10,11 @@ from api_client import MessageAPIClient
 
 # Configure logging
 MY_BOT_NAME='test-bot'  # Update me first!
+log_level = os.getenv('LOG_LEVEL', 'INFO')
+numeric_level = getattr(logging, log_level.upper(), logging.INFO)
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
+    level=numeric_level
 )
 logger = logging.getLogger(MY_BOT_NAME)
 
